@@ -5,7 +5,7 @@ mqant是一款基于Golang语言的简洁,高效,高性能的分布式游戏服�
 # pymqant
 pymqant是已经mqant相同的设计原理用python实现的，python版本设计的初衷并不是替代golang语言版本的mqant，而是希望mqant能充分利用python语言的优势(丰富的开源库)，因此python是golang语言版本的mqant辅助版本
 
-###可以用pymqant来干什么？
+## 可以用pymqant来干什么？
 理论上pymqant也实现了mqant完全相同的功能，只是缺少一个网关模块,可以用pymqant实现游戏的web api模块,mqant实现对性能要求较高的游戏核心逻辑模块，pymqant模块与mqant模块之间可以无缝相互调用。
 
 #	特性
