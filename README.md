@@ -1,0 +1,89 @@
+# mqant
+mqant是一款基于Golang语言的简洁,高效,高性能的分布式游戏服务器框架,研发的初衷是要实现一款能支持高并发,高性能,高实时性,的游戏服务器框架,也希望mqant未来能够做即时通讯和物联网方面的应用
+[https://github.com/liangdas/mqant](https://github.com/liangdas/mqant)
+
+# pymqant
+pymqant是已经mqant相同的设计原理用python实现的，python版本设计的初衷并不是替代golang语言版本的mqant，而是希望mqant能充分利用python语言的优势(丰富的开源库)，因此python是golang语言版本的mqant辅助版本
+
+####可以用pymqant来干什么？
+理论上pymqant也实现了mqant完全相同的功能，只是缺少一个网关模块,可以用pymqant实现游戏的web api模块,mqant实现对性能要求较高的游戏核心逻辑模块，pymqant模块与mqant模块之间可以无缝相互调用。
+
+#	特性
+1. 支持mqant相同的模块机制
+2. 基于gevent协程,开发过程全程做到无callback回调,代码可读性更高
+3. RPC支持本地和远程自动切换,可以直接与mqant模块互通
+4. 未实现网关模块,网关模块建议用golang版本的
+5. gevent不承诺windows下的正常运行,因此pymqant也不承诺能在windows下运行
+6. python进程只能使用一个cpu，因此pymqant不建议做游戏的核心运算模块
+
+
+# 安装
+pymqant需要依赖两个开源库
+gevent
+pika
+
+req.txt文件中已将依赖库罗列出来了
+pip install -r req.txt
+
+
+#	文档
+
+ 快速上手:
+ [mqant wiki](https://github.com/liangdas/mqant/wiki)
+ [pymqant wiki](https://github.com/liangdas/pymqant/wiki)
+ 
+#概述
+ 
+1. [mqant的设计动机](https://github.com/liangdas/mqant/wiki/mqant%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%8A%A8%E6%9C%BA)
+2. [mqant框架介绍](https://github.com/liangdas/mqant/wiki/%E%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8mqant)
+3. [框架架构概述](https://github.com/liangdas/mqant/wiki/mqant%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0)
+4. [通信协议与客户端支持](https://github.com/liangdas/mqant/wiki/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%94%AF%E6%8C%81%E4%BB%8B%E7%BB%8D)
+5. 
+...
+
+#演示示例(golang版本实现的)
+
+ [全平台聊天Demo](https://github.com/liangdas/mqantserver)
+ 
+ [在线Demo演示（随时可能关闭）](https://www.h5link.com/mqant/index.html)
+ 
+ [多人对战吃小球游戏（绿色小球是在线玩家,可以同时开两个浏览器测试,支持移动端）](https://www.h5link.com/hitball/index.html)
+ 
+ 
+ 
+
+#	框架架构
+[mqant的设计动机](https://github.com/liangdas/mqant/wiki/mqant%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%8A%A8%E6%9C%BA)
+
+[框架架构](https://github.com/liangdas/mqant/wiki/mqant%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0)
+
+##下一步计划
+1. 讨论社区
+2. 分布式架构管理模块(Master)
+3. 异常日志监控和汇报
+	1. 异常日志分类汇总
+	2. 定时将异常日志发送到Email
+	3. 定时将异常日志通过webhook发送到团队协作工具中(钉钉,worktile等)
+4. 做一下多进程内存共享方面的实验性研究
+5. 。。。
+
+##贡献者
+
+欢迎提供dev分支的pull request
+
+bug请直接通过issue提交
+
+凡提交代码和建议, bug的童鞋, 均会在下列贡献者名单者出现
+
+
+
+
+
+##版本日志
+
+
+		
+###v1.0.0
+
+	mqant第一个版本
+	
