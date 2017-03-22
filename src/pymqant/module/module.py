@@ -39,9 +39,9 @@ class RPCModule (Module) :
         self.server=RPCServer()
         if settings.has_key("Rabbitmq"):
             self.server.NewRemoteRPCServer(settings["Rabbitmq"])
-        # err = app.RegisterLocalClient(settings["Id"], self.server.get_local_server())
-        # if err != None :
-        #     logging.warning("RegisterLocalClient: id(%s) error(%s)", settings["Id"], err)
+        err = app.RegisterLocalClient(settings["Id"], self.server.get_local_server())
+        if err != None :
+            log.warning("RegisterLocalClient: id(%s) error(%s)", settings["Id"], err)
         log.info("RPCServer init success id(%s)", settings["Id"])
 
     def OnDestroy(self):

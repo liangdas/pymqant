@@ -26,7 +26,7 @@ class TestModule(RPCModule):
             values = (1, 'abc', 2.7)
             s = struct.Struct('I3sf')
             packed_data = s.pack(*values)
-            response,err =self.RpcInvoke("Login","getRand",Bytes("hallo"),{"name":"liangdas"},1.001,50,True)
+            response,err =self.RpcInvoke("PyChat","sayhello","liangdas",{"name":"liangdas"})
             if err!="":
                 log.debug(" [.] 错误 %r" % err)
             else:

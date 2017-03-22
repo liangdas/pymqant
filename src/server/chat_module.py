@@ -14,9 +14,7 @@ class ChatModule(RPCModule):
         self.server.RegisterGO("fib",self.my_fib)
         self.server.RegisterGO("sayhello",self.sayhello)
     def sayhello(self,name,say):
-        print type(say)
-        print say
-        return "say ok",None
+        return name+" say %s"%(say),""
     def my_fib(self,n):
         r=self.fib(n)
         return r,None
