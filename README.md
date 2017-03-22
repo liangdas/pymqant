@@ -27,12 +27,16 @@ pip install -r req.txt
 
 
 #	文档
+	pymqant 架构，开发文档都可以参看mqant的
 
  快速上手:
- [mqant wiki](https://github.com/liangdas/mqant/wiki)
- [pymqant wiki](https://github.com/liangdas/pymqant/wiki)
  
+ [mqant wiki](https://github.com/liangdas/mqant/wiki)
+ 
+ [pymqant wiki](https://github.com/liangdas/pymqant/wiki)
+
 #概述
+
  
 1. [mqant的设计动机](https://github.com/liangdas/mqant/wiki/mqant%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%8A%A8%E6%9C%BA)
 2. [mqant框架介绍](https://github.com/liangdas/mqant/wiki/%E%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8mqant)
